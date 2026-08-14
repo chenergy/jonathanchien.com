@@ -1,0 +1,14 @@
+{
+  "name": "jonathanchien-com",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal site: portfolio, work history, and writing.",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "serve": "node serve.js",
+    "dev": "node build.js --watch & node serve.js",
+    "drafts": "DRAFTS=1 node build.js"
+  },
+  "engines": { "node": ">=18" }
+}

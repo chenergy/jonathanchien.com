@@ -1,0 +1,131 @@
+<div class="page-intro">
+  <h1 class="page-title">Work</h1>
+  <p>
+    Ten years of building software, mostly on the infrastructure side of product teams.
+    A one-page résumé is available as a
+    <a href="assets/jonathan-chien-resume.pdf">PDF</a>.
+  </p>
+</div>
+
+<ul class="entries">
+  <li>
+    <article class="entry">
+      <div class="entry-meta">2023 — now</div>
+      <div>
+        <h2 class="entry-title">Staff Engineer, Platform</h2>
+        <p class="entry-sub">Northlight · San Francisco</p>
+        <div class="entry-body">
+          <p>
+            Technical lead for the platform group: developer tooling, data infrastructure,
+            and the interfaces product teams build against. Roughly nine engineers across
+            three teams, none of whom report to me.
+          </p>
+        </div>
+        <ul class="bullets">
+          <li>Designed and shipped <a href="projects.html#ledger">Ledger</a>, the schema
+              change system now used by most of engineering.</li>
+          <li>Led the migration off a shared monolithic database to per-domain stores,
+              over eighteen months, with no customer-visible downtime.</li>
+          <li>Set up the incident review practice; wrote the first thirty reviews myself
+              so the format had something to imitate.</li>
+        </ul>
+      </div>
+    </article>
+  </li>
+
+  <li>
+    <article class="entry">
+      <div class="entry-meta">2022 — 2023</div>
+      <div>
+        <h2 class="entry-title">Senior Software Engineer</h2>
+        <p class="entry-sub">Northlight · San Francisco</p>
+        <div class="entry-body">
+          <p>
+            Joined to work on the billing rewrite and stayed for the infrastructure. Built
+            the usage metering pipeline that still bills every customer today.
+          </p>
+        </div>
+        <ul class="bullets">
+          <li>Rebuilt metering as an event-sourced pipeline; cut billing disputes by 70%.</li>
+          <li>Reduced p99 checkout latency from 2.4s to 380ms by moving pricing
+              evaluation out of the request path.</li>
+        </ul>
+      </div>
+    </article>
+  </li>
+
+  <li>
+    <article class="entry">
+      <div class="entry-meta">2021 — 2022</div>
+      <div>
+        <h2 class="entry-title">Software Engineer, Payments Infrastructure</h2>
+        <p class="entry-sub">Meridian Labs · Remote</p>
+        <div class="entry-body">
+          <p>
+            Ledger and reconciliation systems for a payments platform moving billions a
+            year. Built <a href="projects.html#halyard">Halyard</a> and owned it through
+            two processor integrations.
+          </p>
+        </div>
+        <ul class="bullets">
+          <li>On-call for the ledger; wrote the runbooks that made that survivable.</li>
+          <li>Introduced property-based testing for money math after a rounding bug
+              cost us a very uncomfortable week.</li>
+        </ul>
+      </div>
+    </article>
+  </li>
+
+  <li>
+    <article class="entry">
+      <div class="entry-meta">2020 — 2021</div>
+      <div>
+        <h2 class="entry-title">Co-founder &amp; Engineer</h2>
+        <p class="entry-sub">Foundry · San Francisco</p>
+        <div class="entry-body">
+          <p>
+            Built the product, talked to users, raised a small seed round, and wound the
+            company down when it became clear we had built something admired rather than
+            needed. Details on the <a href="projects.html#foundry">projects page</a>.
+          </p>
+        </div>
+      </div>
+    </article>
+  </li>
+
+  <li>
+    <article class="entry">
+      <div class="entry-meta">2016 — 2020</div>
+      <div>
+        <h2 class="entry-title">Software Engineer</h2>
+        <p class="entry-sub">Cartwright &amp; Co. · Seattle</p>
+        <div class="entry-body">
+          <p>
+            First engineering job. Internal tools, then the API platform. Learned to write
+            code other people could maintain, largely by having to maintain my own.
+          </p>
+        </div>
+      </div>
+    </article>
+  </li>
+</ul>
+
+<section class="section measure">
+  <p class="label">Tools I reach for</p>
+  <p class="muted">
+    <strong>Daily:</strong> Go, TypeScript, Python, Postgres, SQLite.
+    <strong>Often:</strong> Rust, Kafka, Terraform, Kubernetes, OpenTelemetry.
+    <strong>Comfortable but rusty:</strong> Ruby, Java, Elixir.
+  </p>
+  <p class="muted">
+    Languages are the easy part. What I actually care about is instrumentation,
+    reversible deploys, and schemas that describe reality.
+  </p>
+</section>
+
+<section class="section measure">
+  <p class="label">Education</p>
+  <div class="entry-body">
+    <p><strong>B.S. Computer Science</strong> — University of Washington, 2016.</p>
+  </div>
+</section>

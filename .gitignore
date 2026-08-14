@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Build output. GitHub Actions runs `node build.js` and publishes dist/,
+# so it does not belong in the repo. Build locally whenever you want to
+# preview — it is regenerated from scratch every time.
+dist/

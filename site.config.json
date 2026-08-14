@@ -1,0 +1,40 @@
+{
+  "site": {
+    "title": "Jonathan Chien",
+    "tagline": "Product engineer. I build clear, durable software.",
+    "description": "Portfolio, work history, and writing by Jonathan Chien.",
+    "url": "https://jonathanchien.com",
+    "author": "Jonathan Chien",
+    "email": "hello@jonathanchien.com",
+    "lang": "en"
+  },
+
+  "nav": [
+    { "label": "Home",     "href": "index.html" },
+    { "label": "Projects", "href": "projects.html" },
+    { "label": "Work",     "href": "work.html" },
+    { "label": "Writing",  "href": "blog.html" },
+    { "label": "About",    "href": "about.html" }
+  ],
+
+  "social": [
+    { "label": "Email",    "href": "mailto:hello@jonathanchien.com" },
+    { "label": "GitHub",   "href": "https://github.com/jonathanchien" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/jonathanchien" },
+    { "label": "RSS",      "href": "feed.xml" }
+  ],
+
+  "pages": {
+    "index":    { "title": "Jonathan Chien",  "description": "Product engineer building clear, durable software.", "bareTitle": true },
+    "projects": { "title": "Projects",        "description": "Selected work — what it was, what I built, and what happened." },
+    "work":     { "title": "Work",            "description": "Roles, responsibilities, and the tools I reach for." },
+    "about":    { "title": "About",           "description": "Background, how I work, and how to reach me." },
+    "404":      { "title": "Not found",       "description": "That page does not exist.", "noindex": true }
+  },
+
+  "blog": {
+    "title": "Writing",
+    "description": "Notes on building software, working with people, and the occasional tangent.",
+    "postsPerPage": 0
+  }
+}
