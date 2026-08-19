@@ -113,9 +113,15 @@ build command `node build.js` and publish directory `dist`. Any plain web host
 works too — copy the contents of `dist/` up, that is the whole deploy.
 
 Before going live, set `site.url` in `site.config.json` to your real domain —
-canonical tags, the RSS feed, and the sitemap all derive from it. For a custom
-domain, add a `CNAME` file containing the domain to `assets/` (it gets copied
-into `dist/`) and configure the domain under Settings → Pages.
+canonical tags, the RSS feed, and the sitemap all derive from it.
+
+For a custom domain, set it under **Settings → Pages → Custom domain**, and point
+your DNS at GitHub (four `A` records for the apex, plus a `CNAME` on `www`
+pointing at `USERNAME.github.io`). No `CNAME` file is needed in the repo — when
+publishing from a GitHub Actions workflow, GitHub neither creates nor reads one;
+the domain lives in the Pages settings. Note that `assets/` is copied to
+`dist/assets/`, not to the site root, so a file placed there would not be served
+at the root regardless.
 
 ## Working on this from a phone
 
