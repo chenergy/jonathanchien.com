@@ -1,151 +1,96 @@
 <div class="page-intro">
   <h1 class="page-title">Projects</h1>
   <p>
-    A few things I have built, with enough detail to tell whether they are interesting
-    to you. Where I can, I have included what actually happened rather than just what
-    was shipped.
+    Selected work, with enough detail to tell whether it is interesting to you.
+    Some of it is public; some I can only describe in general terms.
   </p>
 </div>
 
 <ul class="entries">
-  <li id="ledger">
+  <li id="teleoperation">
     <article class="entry">
-      <div class="entry-meta">2025 — now</div>
+      <div class="entry-meta">2023 — now</div>
       <div>
-        <h2 class="entry-title">Ledger</h2>
-        <p class="entry-sub">Schema registry and migration runner · Northlight · Go, Postgres</p>
+        <h2 class="entry-title">Robot Teleoperation Interfaces</h2>
+        <p class="entry-sub">Google DeepMind</p>
         <div class="entry-body">
           <p>
-            Northlight had forty services sharing eleven databases and no agreed way to
-            change a column. Migrations went out on a weekly release train, which meant a
-            one-line change waited five days and a bad one took the whole train down.
+            Interfaces and infrastructure for operating robots directly — the control
+            surface a person uses to drive real hardware, plus the systems that record
+            those sessions as training data.
           </p>
           <p>
-            Ledger makes every schema change a reviewed artifact: it records the intended
-            end state, plans a reversible path to get there, and refuses plans that would
-            lock a hot table. It runs migrations behind a feature-flagged dual-write window
-            so a rollback is a flag flip rather than an incident.
+            The design problem is that a teleoperation session serves two audiences at
+            once. The operator needs low latency, legible state, and controls that map
+            cleanly onto what the robot can actually do. The dataset needs consistency,
+            clean episode boundaries, and demonstrations that represent the task rather
+            than the operator's habits. Optimizing hard for either one degrades the other.
           </p>
         </div>
-        <ul class="bullets">
-          <li>Median time from merged migration to production: 5 days → 40 minutes.</li>
-          <li>Zero migration-caused incidents in the eight months since rollout.</li>
-          <li>Adopted by 6 of 8 product teams without a mandate, which I am proud of.</li>
-        </ul>
-        <ul class="tags">
-          <li class="tag">Go</li>
-          <li class="tag">Postgres</li>
-          <li class="tag">Platform</li>
-          <li class="tag">Internal</li>
-        </ul>
-      </div>
-    </article>
-  </li>
-
-  <li id="tideline">
-    <article class="entry">
-      <div class="entry-meta">2024</div>
-      <div>
-        <h2 class="entry-title">Tideline</h2>
-        <p class="entry-sub">Terminal trace explorer · Open source · Rust</p>
-        <div class="entry-body">
-          <p>
-            During a long outage I got tired of paging through a web trace UI on a laptop
-            tethered to a phone. Tideline reads OpenTelemetry spans and renders them as a
-            navigable flame graph in the terminal, with filtering by service, duration, and
-            error status.
-          </p>
-          <p>
-            I expected to be the only user. It is now at 2.1k stars with contributors in
-            four countries, and maintaining it has taught me more about receiving code
-            review than writing it.
-          </p>
-        </div>
-        <ul class="tags">
-          <li class="tag">Rust</li>
-          <li class="tag">OpenTelemetry</li>
-          <li class="tag">CLI</li>
-          <li class="tag">Open source</li>
-        </ul>
-      </div>
-    </article>
-  </li>
-
-  <li id="quarry">
-    <article class="entry">
-      <div class="entry-meta">2023</div>
-      <div>
-        <h2 class="entry-title">Quarry</h2>
-        <p class="entry-sub">Reading tool · Side project · TypeScript, SQLite</p>
-        <div class="entry-body">
-          <p>
-            Save an article, get it back when it matters. Quarry strips articles to text,
-            indexes them for full-text search, and mails a weekly digest of what you saved
-            but never read. Everything is stored in a single SQLite file you can download
-            and take with you.
-          </p>
-          <p>
-            About 400 people use it. It costs eleven dollars a month to run, which feels
-            like the right shape for a side project.
-          </p>
-        </div>
-        <ul class="tags">
-          <li class="tag">TypeScript</li>
-          <li class="tag">SQLite</li>
-          <li class="tag">Side project</li>
-        </ul>
-      </div>
-    </article>
-  </li>
-
-  <li id="halyard">
-    <article class="entry">
-      <div class="entry-meta">2021 — 2022</div>
-      <div>
-        <h2 class="entry-title">Halyard</h2>
-        <p class="entry-sub">Payments reconciliation · Meridian Labs · Python, Kafka</p>
-        <div class="entry-body">
-          <p>
-            A reconciliation engine matching card settlements against the internal ledger
-            across six processors. The hard part was never the matching — it was
-            representing the twenty ways a transaction can be legitimately unmatched and
-            making that legible to a finance team at 6am.
-          </p>
-        </div>
-        <ul class="bullets">
-          <li>Cut the manual reconciliation queue from ~900 items a day to under 40.</li>
-          <li>Handled roughly $2B in annualized volume by the time I left.</li>
-        </ul>
         <ul class="tags">
           <li class="tag">Python</li>
-          <li class="tag">Kafka</li>
-          <li class="tag">Fintech</li>
+          <li class="tag">C#</li>
+          <li class="tag">Unity</li>
+          <li class="tag">Teleoperation</li>
+          <li class="tag">Data collection</li>
         </ul>
       </div>
     </article>
   </li>
 
-  <li id="foundry">
+  <li id="ux-research-simulation">
     <article class="entry">
-      <div class="entry-meta">2020 — 2021</div>
+      <div class="entry-meta">2016 — 2019</div>
       <div>
-        <h2 class="entry-title">Foundry</h2>
-        <p class="entry-sub">Co-founder · Shut down 2021</p>
+        <h2 class="entry-title">UX Research Simulation</h2>
+        <p class="entry-sub">Research institute of an automotive manufacturer · C#, Unity, Processing</p>
         <div class="entry-body">
           <p>
-            A collaborative environment for data teams. We built something people liked
-            demoing and did not need. We had 14 months of runway, honest early users, and
-            no path from “this is neat” to “I would be upset if this went away.”
+            Experimental UX functionality for VR applications used in vehicle design,
+            integrated into robotics work. Researchers could put someone inside a design
+            before it existed in physical form and watch how they behaved in it.
           </p>
           <p>
-            We returned what was left of the money and wound it down. I learned more in
-            that year than in the three before it, most of it about talking to customers
-            before writing code.
+            Alongside the simulation itself, I built tooling to capture research metrics
+            during runtime — the part that turns a compelling demo into something a study
+            can actually draw conclusions from. I also ran demos for both public and
+            internal audiences.
           </p>
         </div>
         <ul class="tags">
-          <li class="tag">Startup</li>
-          <li class="tag">Product</li>
+          <li class="tag">C#</li>
+          <li class="tag">Unity</li>
+          <li class="tag">Processing</li>
+          <li class="tag">VR</li>
+        </ul>
+      </div>
+    </article>
+  </li>
+
+  <li id="tango">
+    <article class="entry">
+      <div class="entry-meta">2016 — 2019</div>
+      <div>
+        <h2 class="entry-title">Tango — Augmented Reality Platform</h2>
+        <p class="entry-sub">Google · C#, Unity, Tango</p>
+        <div class="entry-body">
+          <p>
+            Contributed code samples and usage demos to the Tango Unity SDK releases —
+            publicly distributed code showing developers what the platform could do,
+            including mesh occlusion and ground detection.
+          </p>
+          <p>
+            Writing sample code for other engineers is its own discipline. It has to be
+            simple enough to read in one sitting and honest enough that it does not fall
+            apart the moment someone adapts it. Most of the work was deciding what to
+            leave out.
+          </p>
+        </div>
+        <ul class="tags">
+          <li class="tag">C#</li>
+          <li class="tag">Unity</li>
+          <li class="tag">Tango</li>
+          <li class="tag">AR</li>
         </ul>
       </div>
     </article>
@@ -153,6 +98,6 @@
 </ul>
 
 <p class="mt-xl small faint measure">
-  Some work is not listed here because it is under NDA. Happy to talk about it in
-  more general terms — <a href="mailto:hello@jonathanchien.com">get in touch</a>.
+  Some work is not listed here because it is not public. Happy to talk about it in
+  general terms — <a href="mailto:jonathan.chien@gmail.com">get in touch</a>.
 </p>

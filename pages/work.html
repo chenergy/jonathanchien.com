@@ -1,9 +1,9 @@
 <div class="page-intro">
   <h1 class="page-title">Work</h1>
   <p>
-    Ten years of building software, mostly on the infrastructure side of product teams.
-    A one-page résumé is available as a
-    <a href="assets/jonathan-chien-resume.pdf">PDF</a>.
+    A decade of building interactive software — games and AR/VR early on, robotics
+    and human-robot interfaces since. The through-line is interfaces for things
+    that move in the physical world.
   </p>
 </div>
 
@@ -12,22 +12,42 @@
     <article class="entry">
       <div class="entry-meta">2023 — now</div>
       <div>
-        <h2 class="entry-title">Staff Engineer, Platform</h2>
-        <p class="entry-sub">Northlight · San Francisco</p>
+        <h2 class="entry-title">UX Engineer</h2>
+        <p class="entry-sub">Google DeepMind</p>
         <div class="entry-body">
           <p>
-            Technical lead for the platform group: developer tooling, data infrastructure,
-            and the interfaces product teams build against. Roughly nine engineers across
-            three teams, none of whom report to me.
+            I work on how people control robots. That covers teleoperation interfaces —
+            the systems an operator uses to drive a robot directly — along with the
+            infrastructure those interfaces run on and the data collection pipelines
+            that turn operator sessions into training data.
+          </p>
+          <p>
+            Teleoperation sits in an unusual place. It is a real-time control problem,
+            a UX problem, and a data problem at once: the same session that lets a person
+            complete a task is also the demonstration a model learns from. Designing for
+            the operator and designing for the dataset are not the same thing, and most
+            of the interesting decisions live in that tension.
+          </p>
+          <p>
+            This work supports DeepMind's broader robotics effort, including
+            <a href="https://deepmind.google/models/gemini-robotics/" rel="noopener">Gemini
+            Robotics</a> — vision-language-action models intended as a general intelligence
+            layer for robots, able to generalize across different hardware and to tasks
+            they were not explicitly trained on, rather than being purpose-built per task.
           </p>
         </div>
         <ul class="bullets">
-          <li>Designed and shipped <a href="projects.html#ledger">Ledger</a>, the schema
-              change system now used by most of engineering.</li>
-          <li>Led the migration off a shared monolithic database to per-domain stores,
-              over eighteen months, with no customer-visible downtime.</li>
-          <li>Set up the incident review practice; wrote the first thirty reviews myself
-              so the format had something to imitate.</li>
+          <li>Teleoperation interfaces for direct human control of robot hardware.</li>
+          <li>Supporting infrastructure and internal tooling around those interfaces.</li>
+          <li>Data collection systems that capture operator demonstrations for training.</li>
+        </ul>
+        <ul class="tags">
+          <li class="tag">Python</li>
+          <li class="tag">C#</li>
+          <li class="tag">Unity</li>
+          <li class="tag">Robotics</li>
+          <li class="tag">Teleoperation</li>
+          <li class="tag">HRI</li>
         </ul>
       </div>
     </article>
@@ -35,20 +55,35 @@
 
   <li>
     <article class="entry">
-      <div class="entry-meta">2022 — 2023</div>
+      <div class="entry-meta">2019 — 2023</div>
       <div>
-        <h2 class="entry-title">Senior Software Engineer</h2>
-        <p class="entry-sub">Northlight · San Francisco</p>
+        <h2 class="entry-title">UX Engineer</h2>
+        <p class="entry-sub">Google Brain Research</p>
         <div class="entry-body">
           <p>
-            Joined to work on the billing rewrite and stayed for the infrastructure. Built
-            the usage metering pipeline that still bills every customer today.
+            Robotics interface work within Google's Brain team, before the org became
+            part of Google DeepMind.
+          </p>
+          <p>
+            I worked on <strong>Project Reach</strong>, whose goal was to democratize
+            remote robotic teleoperation — making a wide variety of robotic arms
+            operable from a distance, rather than each platform needing its own bespoke
+            control stack. Most of that problem is finding an abstraction general enough
+            to cover hardware that disagrees about nearly everything, without flattening
+            away the differences that actually matter to an operator.
+          </p>
+          <p>
+            I also built teleoperation for <strong>MetA</strong>, the
+            <a href="https://x.company/projects/everyday-robots/" rel="noopener">Everyday
+            Robots</a> mobile manipulator platform, supporting both continuous control —
+            an operator driving the arm directly in real time — and action-scripted
+            control, where predefined behaviors are composed and dispatched.
           </p>
         </div>
-        <ul class="bullets">
-          <li>Rebuilt metering as an event-sourced pipeline; cut billing disputes by 70%.</li>
-          <li>Reduced p99 checkout latency from 2.4s to 380ms by moving pricing
-              evaluation out of the request path.</li>
+        <ul class="tags">
+          <li class="tag">Robotics</li>
+          <li class="tag">Teleoperation</li>
+          <li class="tag">Research</li>
         </ul>
       </div>
     </article>
@@ -56,76 +91,100 @@
 
   <li>
     <article class="entry">
-      <div class="entry-meta">2021 — 2022</div>
-      <div>
-        <h2 class="entry-title">Software Engineer, Payments Infrastructure</h2>
-        <p class="entry-sub">Meridian Labs · Remote</p>
-        <div class="entry-body">
-          <p>
-            Ledger and reconciliation systems for a payments platform moving billions a
-            year. Built <a href="projects.html#halyard">Halyard</a> and owned it through
-            two processor integrations.
-          </p>
-        </div>
-        <ul class="bullets">
-          <li>On-call for the ledger; wrote the runbooks that made that survivable.</li>
-          <li>Introduced property-based testing for money math after a rounding bug
-              cost us a very uncomfortable week.</li>
-        </ul>
-      </div>
-    </article>
-  </li>
-
-  <li>
-    <article class="entry">
-      <div class="entry-meta">2020 — 2021</div>
-      <div>
-        <h2 class="entry-title">Co-founder &amp; Engineer</h2>
-        <p class="entry-sub">Foundry · San Francisco</p>
-        <div class="entry-body">
-          <p>
-            Built the product, talked to users, raised a small seed round, and wound the
-            company down when it became clear we had built something admired rather than
-            needed. Details on the <a href="projects.html#foundry">projects page</a>.
-          </p>
-        </div>
-      </div>
-    </article>
-  </li>
-
-  <li>
-    <article class="entry">
-      <div class="entry-meta">2016 — 2020</div>
+      <div class="entry-meta">2016 — 2019</div>
       <div>
         <h2 class="entry-title">Software Engineer</h2>
-        <p class="entry-sub">Cartwright &amp; Co. · Seattle</p>
+        <p class="entry-sub">Moback Inc</p>
         <div class="entry-body">
           <p>
-            First engineering job. Internal tools, then the API platform. Learned to write
-            code other people could maintain, largely by having to maintain my own.
+            Unity contract engineer, working on-site with engineering teams at Google
+            and at an automotive manufacturer's research institute. Built games, tools,
+            and AR/VR applications — UX research in VR, AR SDK support, and robotics UI.
           </p>
         </div>
+        <ul class="tags">
+          <li class="tag">Unity</li>
+          <li class="tag">C#</li>
+          <li class="tag">AR/VR</li>
+        </ul>
+      </div>
+    </article>
+  </li>
+
+  <li>
+    <article class="entry">
+      <div class="entry-meta">2013 — 2015</div>
+      <div>
+        <h2 class="entry-title">Gameplay Programmer</h2>
+        <p class="entry-sub">John McNeil Studio</p>
+        <div class="entry-body">
+          <p>
+            Built games and interactive experiences in Unity to market and demonstrate
+            client technologies. Worked across teams of 2D and 3D artists and programmers
+            on web content, mobile games, and VR experiences, primarily showcased at
+            security and big data conferences.
+          </p>
+        </div>
+        <ul class="tags">
+          <li class="tag">Unity</li>
+          <li class="tag">Games</li>
+          <li class="tag">VR</li>
+        </ul>
       </div>
     </article>
   </li>
 </ul>
 
 <section class="section measure">
-  <p class="label">Tools I reach for</p>
-  <p class="muted">
-    <strong>Daily:</strong> Go, TypeScript, Python, Postgres, SQLite.
-    <strong>Often:</strong> Rust, Kafka, Terraform, Kubernetes, OpenTelemetry.
-    <strong>Comfortable but rusty:</strong> Ruby, Java, Elixir.
-  </p>
-  <p class="muted">
-    Languages are the easy part. What I actually care about is instrumentation,
-    reversible deploys, and schemas that describe reality.
-  </p>
+  <p class="label">Technical</p>
+  <div class="entry-body">
+    <p>
+      <strong>Day to day:</strong> Python and C#, with Python taking up more of the
+      work as it has moved toward data and infrastructure. Unity is still a primary
+      tool — a real-time engine that renders state and takes input turns out to be a
+      reasonable foundation for robot interfaces, not just for games.
+    </p>
+    <p>
+      <strong>Also shipped in:</strong> C++, Java, Lua.
+    </p>
+    <p>
+      <strong>Tools:</strong> Git, Visual Studio and VS Code, Blender, Maya,
+      Illustrator, Photoshop.
+    </p>
+    <p>
+      <strong>Practice:</strong> user-based feature design, agile development, and
+      working across the seam between art and engineering — which is most of what
+      interface work for physical systems actually is.
+    </p>
+  </div>
 </section>
 
 <section class="section measure">
   <p class="label">Education</p>
-  <div class="entry-body">
-    <p><strong>B.S. Computer Science</strong> — University of Washington, 2016.</p>
-  </div>
+  <ul class="entries">
+    <li>
+      <article class="entry">
+        <div class="entry-meta">2011 — 2013</div>
+        <div>
+          <h3 class="entry-title">B.S. Visual &amp; Game Programming</h3>
+          <p class="entry-sub">Art Institute of California, San Francisco</p>
+          <div class="entry-body">
+            <p class="small">GPA 3.9 — President's List, Dean's List.</p>
+          </div>
+        </div>
+      </article>
+    </li>
+    <li>
+      <article class="entry">
+        <div class="entry-meta">2006 — 2009</div>
+        <div>
+          <h3 class="entry-title">Political Economy</h3>
+          <p class="entry-sub">University of California, Berkeley</p>
+          <div class="entry-body">
+            <p class="small">Transferred to the Art Institute of California, San Francisco.</p>
+          </div>
+        </div>
+      </article>
+    </li>
+  </ul>
 </section>

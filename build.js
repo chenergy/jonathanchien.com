@@ -86,6 +86,12 @@ function parseFrontMatter(raw) {
     let [, key, value] = kv;
     value = value.trim();
 
+    // Strip trailing inline comments, as YAML does. Only on unquoted values —
+    // a quoted string is allowed to contain '#' (hex colors, hashtags).
+    if (!/^["']/.test(value)) {
+      value = value.replace(/\s+#.*$/, '').trim();
+    }
+
     if (/^\[.*\]$/.test(value)) {
       data[key] = value
         .slice(1, -1)
