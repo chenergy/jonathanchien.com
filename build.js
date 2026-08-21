@@ -396,7 +396,7 @@ function loadPosts() {
       };
     })
     .filter((post) => !post.draft || process.env.DRAFTS === '1')
-    .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0));
+    .sort((a, b) => (b.date?.getTime() || 0) - (a.date?.getTime() || 0) || b.file.localeCompare(a.file));
 }
 
 function postMeta(post) {
@@ -492,6 +492,10 @@ function buildPages(posts) {
     // Let index.html show the three most recent posts without duplicating markup.
     content = content.replace('<!--RECENT_POSTS-->', recentPostsMarkup(posts, 3));
 
+    // Let a project page embed its own devlog: <!--POSTS_TAGGED:some-tag-->
+    content = content.replace(/<!--POSTS_TAGGED:([a-z0-9-]+)-->/g,
+      (_, tag) => taggedPostsMarkup(posts, tag));
+
     writeFile(file, renderPage({
       title: meta.title,
       description: meta.description,
@@ -508,6 +512,24 @@ function recentPostsMarkup(posts, limit) {
   if (!posts.length) return '<p class="muted">No posts yet.</p>';
   return `<ul class="entries">
 ${posts.slice(0, limit).map((post) => `      <li>
+        <article class="entry">
+          <div class="entry-meta"><time datetime="${post.dateISO}">${post.dateDisplay}</time></div>
+          <div>
+            <h3 class="entry-title"><a href="${post.url}">${escapeHtml(post.title)}</a></h3>
+            <div class="entry-body"><p>${escapeHtml(post.summary)}</p></div>
+          </div>
+        </article>
+      </li>`).join('\n')}
+    </ul>`;
+}
+
+/** Full-detail post list for a given tag, newest first — used for project devlogs. */
+function taggedPostsMarkup(posts, tag) {
+  const matches = posts.filter((post) => post.tags.includes(tag));
+  if (!matches.length) return '<p class="muted">No entries yet.</p>';
+
+  return `<ul class="entries">
+${matches.map((post) => `      <li>
         <article class="entry">
           <div class="entry-meta"><time datetime="${post.dateISO}">${post.dateDisplay}</time></div>
           <div>

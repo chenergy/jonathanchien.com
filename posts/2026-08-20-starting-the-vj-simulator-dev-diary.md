@@ -12,6 +12,8 @@ notes yourself, you're the one running the show: swinging lights, firing
 lasers, cueing platforms, all in time with the music. Think less "rhythm
 game player" and more "rhythm game performer."
 
+![The proof of concept: hitting notes on beat as approach rings close in](../assets/img/blog/starting-the-vj-simulator-dev-diary.gif)
+
 It's very early. Right now there's just a small proof of concept running on
 keyboard, no headset involved yet — enough to prove the core "react to the
 beat" loop actually feels good before I sink time into VR input and staging.

@@ -28,6 +28,7 @@
     "projects": { "title": "Projects",        "description": "Selected work in robot teleoperation, VR research tooling, and AR platforms." },
     "work":     { "title": "Work",            "description": "Roles across robotics, AR/VR, and games — and the tools behind them." },
     "about":    { "title": "About",           "description": "Background, how I work, and how to reach me." },
+    "vj-simulator": { "title": "VJ Simulator", "description": "A VR rhythm game where you control the entire DJ set. Project notes and devlog." },
     "404":      { "title": "Not found",       "description": "That page does not exist.", "noindex": true }
   },
 
